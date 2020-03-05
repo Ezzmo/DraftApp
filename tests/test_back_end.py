@@ -2,7 +2,7 @@ import unittest
 
 from flask import abort, url_for
 from flask_testing import TestCase
-
+from os import getenv
 from application import app, db
 from application.models import Users, Posts
 class TestBase(TestCase):
@@ -12,7 +12,7 @@ class TestBase(TestCase):
         # pass in configurations for test database
         config_name = 'testing'
         app.config.update(
-            SQLALCHEMY_DATABASE_URI='mysql+pymysql://(YOUR TEST DB INFO)'        )
+            SQLALCHEMY_DATABASE_URI=getenv('DATABASE_URI')
         return app
 
     def setUp(self):
