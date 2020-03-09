@@ -1,15 +1,15 @@
 from application import app, db, bcrypt
 from flask import render_template, redirect, url_for, request
-from application.forms import PostForm, RegistrationForm, LoginForm, UpdateAccountForm
-from application.models import Posts, Users
+from application.forms import ChooseForm, RegistrationForm, LoginForm, UpdateAccountForm
+from application.models import Userteams, Users, Players
 from flask_login import login_user, current_user, logout_user, login_required
 
 
 @app.route('/')
-@app.route('/home')
+@app.route('/board')
 def home():
-	postData = Posts.query.all()
-	return render_template('home.html', title='Home', posts=postData)
+	teamData = Userteams.query.all()
+	return render_template('home.html', title='Board', teams=teamData)
 
 @app.route('/about')
 def about():
@@ -31,7 +31,7 @@ def register():
 		db.session.add(user)
 		db.session.commit()
 
-		return redirect(url_for('post'))
+		return redirect(url_for('make'))
 
 	return render_template('register.html', title='Register', form=form)
 
@@ -51,17 +51,21 @@ def login():
 				return redirect('home')
 	return render_template('login.html', title='Login', form=form)
 
-@app.route('/post', methods=['GET', 'POST'])
+@app.route('/make', methods=['GET', 'POST'])
 @login_required
-def post():
-	form = PostForm()
+def make():
+	form = ChooseForm()
 	if form.validate_on_submit():
-		postData = Posts(
-			title=form.title.data,
-			content=form.content.data,
-			author=current_user
+		teamData = Userteams(
+			teamname = form.name.data,
+			player1 = form.player1.data,
+			player2 = form.player2.data,
+			player3 = form.player3.data,
+			player4 = form.player4.data,
+			player5 = form.player5.data,
+			user_id = current_user.id
 		)
-		db.session.add(postData)
+		db.session.add(teamData)
 		db.session.commit()
 		return redirect(url_for('home'))
 
@@ -95,11 +99,20 @@ def account():
 @login_required
 def account_delete():
         user = current_user.id
-        posts = Posts.query.filter_by(user_id=user)
-        for post in posts:
-                db.session.delete(post)
+        teams = Userteams.query.filter_by(user_id=user)
+        for team in teamss:
+                db.session.delete(team)
         account = Users.query.filter_by(id=user).first()
         logout_user()
         db.session.delete(account)
         db.session.commit()
         return redirect(url_for('register'))
+
+@app.route("/board/clear", methods=["GET", "POST"])
+@login_required
+def board_delete():
+        teams = Userteams.query.filter_by(user_id=user)
+		for team in teams:
+        	db.session.delete(team)
+        	db.session.commit()
+        return redirect(url_for('board'))

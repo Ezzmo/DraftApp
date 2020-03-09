@@ -1,26 +1,60 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, PasswordField, BooleanField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
-from application.models import Users
+from application.models import *
 from flask_login import current_user
 
-class PostForm(FlaskForm):
+class ChooseForm(FlaskForm):
 
-    title = StringField('Title',
+    name = StringField('Name your team',
+            validators = [
+                DataRequired(),
+                Length(min=3, max=100)
+            ]
+    )
+
+    player1 = StringField('LW',
             validators = [
                 DataRequired(),
                 Length(min=4, max=100)
             ]
     )
 
-    content = StringField('Content',
+    player2 = StringField('RW',
             validators = [
                 DataRequired(),
                 Length(min=4, max=100)
             ]
     )
 
-    submit = SubmitField('Post Content')
+    player3 = StringField('ST',
+            validators = [
+                DataRequired(),
+                Length(min=4, max=100)
+            ]
+    )
+
+    player4 = StringField('RB',
+            validators = [
+                DataRequired(),
+                Length(min=4, max=100)
+            ]
+    )
+
+    player5 = StringField('LB',
+            validators = [
+                DataRequired(),
+                Length(min=4, max=100)
+            ]
+    )
+
+    def validate_name(self, name):
+        name = Userteams.query.filter_by(teamname=name.data).first()
+
+        if name:
+            raise ValidationError('Name already in use')
+
+    submit = SubmitField('Post team')
 
 class RegistrationForm(FlaskForm):
     first_name = StringField('First Name',

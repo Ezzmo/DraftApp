@@ -4,11 +4,11 @@
 	<form method="POST" action="">
 		{{ form.hidden_tag() }}
 		<div class="form-group">
-			{{ form.title.label }}
-			{{ form.title }}
-			{% if form.title.errors %}
+			{{ form.name.label }}
+			{{ form.name }}
+			{% if form.name.errors %}
 			<div class="error">
-				{% for error in form.title.errors %}
+				{% for error in form.name.errors %}
 				    <span>{{ error }}</span>
 				{% endfor %}
 			</div>
@@ -16,11 +16,55 @@
 		</div>
 		<br>
 		<div class="form-group">
-			{{ form.content.label }}
-			{{ form.content }}
-			{% if form.content.errors %}
+			{{ form.player1.label }}
+			{{ form.player1 }}
+			{% if form.player1.errors %}
 			<div class="error">
-				{% for error in form.content.errors %}
+				{% for error in form.player1.errors %}
+				    <span>{{ error }}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+		<div class="form-group">
+			{{ form.player2.label }}
+			{{ form.player2 }}
+			{% if form.player2.errors %}
+			<div class="error">
+				{% for error in form.player2.errors %}
+				    <span>{{ error }}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+		<div class="form-group">
+			{{ form.player3.label }}
+			{{ form.player3 }}
+			{% if form.player3.errors %}
+			<div class="error">
+				{% for error in form.player3.errors %}
+				    <span>{{ error }}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+		<div class="form-group">
+			{{ form.player4.label }}
+			{{ form.player4 }}
+			{% if form.player4.errors %}
+			<div class="error">
+				{% for error in form.player4.errors %}
+				    <span>{{ error }}</span>
+				{% endfor %}
+			</div>
+			{% endif %}
+		</div>
+		<div class="form-group">
+			{{ form.player5.label }}
+			{{ form.player5 }}
+			{% if form.player5.errors %}
+			<div class="error">
+				{% for error in form.player5.errors %}
 				    <span>{{ error }}</span>
 				{% endfor %}
 			</div>

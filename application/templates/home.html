@@ -1,14 +1,36 @@
 {% extends "layout.html" %}
 
 {% block body_content %}
-<p>Hello jay</p>
-{% for post in posts %}
-	<div>
-		<h3>{{ post.title }}</h3>
-		<p><b> - First name:</b>{{ post.author.first_name }}</p>
-		<p><b> - Last name:</b>{{ post.author.last_name }}</p>
-		<p> -- {{ post.content }}</p>
-	</div>
-{% endfor %}
+<p>Community Teams</p>
+<style>
+	table, th, td {
+			border:1px solid black;
+	}
+</style>
+
+<div>
+<table style="width:100%">
+	<tr>
+		<th>Name</th>
+		<th>PLayer1</th>
+		<th>Player2</th>
+		<th>Player3</th>
+        <th>Player4</th>
+        <th>PLayer5</th>
+        <th>UserId</th>
+	</tr>
+	{% for team in teams %}
+	<tr>
 	
+			<td>{{ team.teamname }}</td>
+			<td>{{ team.player1 }}</td>
+			<td>{{ team.player2 }}</td>
+			<td>{{ team.player3 }}</td>
+            <td>{{ team.player4 }}</td>
+			<td>{{ team.player5 }}</td>
+			<td><a href="{{ url_for('user',({{ team.user_id }})) }}">{{ team.user_id }}</a></td>
+	</tr>
+	{% endfor %}
+</table>
+</div>
 {% endblock %}
