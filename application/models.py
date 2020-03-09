@@ -4,9 +4,7 @@ from datetime import datetime
 
 class Users(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
-    first_name = db.Column(db.String(30), nullable=False)
-    last_name = db.Column(db.String(30), nullable=False)
-    email = db.Column(db.String(150), nullable=False, unique=True)
+    name = db.Column(db.String(30), nullable=False)
     password = db.Column(db.String(250), nullable=False)
     teams = db.relationship('Userteams', backref='User', lazy=True)
 
@@ -37,7 +35,7 @@ class Userteams(db.Model):
 class Players(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(30), nullable=False)
-    club = db.Column(db.String(30), nullable=False)
+    age = db.Column(db.Integer, nullable=False)
     position = db.Column(db.String(4), nullable=False)
 
 

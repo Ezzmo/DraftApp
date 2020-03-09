@@ -11,13 +11,12 @@
 <div>
 <table style="width:100%">
 	<tr>
-		<th>Name</th>
-		<th>PLayer1</th>
+		<th>Week/team name</th>
+		<th>Player1</th>
 		<th>Player2</th>
 		<th>Player3</th>
         <th>Player4</th>
-        <th>PLayer5</th>
-        <th>UserId</th>
+        <th>Player5</th>
 	</tr>
 	{% for team in teams %}
 	<tr>
@@ -27,8 +26,7 @@
 			<td>{{ team.player2 }}</td>
 			<td>{{ team.player3 }}</td>
             <td>{{ team.player4 }}</td>
-			<td>{{ team.player5 }}</td>
-			<td><a href="{{ url_for('user',({{ team.user_id }})) }}">{{ team.user_id }}</a></td>
+			<td>{{ team.player5 }}</td>			
 	</tr>
 	{% endfor %}
 </table>

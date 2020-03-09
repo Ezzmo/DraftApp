@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, PasswordField, BooleanField
+from wtforms import StringField, SubmitField, PasswordField, BooleanField, SelectField
 from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationError
 from application.models import *
 from flask_login import current_user
@@ -13,40 +13,12 @@ class ChooseForm(FlaskForm):
             ]
     )
 
-    player1 = StringField('LW',
-            validators = [
-                DataRequired(),
-                Length(min=4, max=100)
-            ]
-    )
+    player1 = SelectField('Player 1', choices=[])
+    player2 = SelectField('Player 2', choices=[])
+    player3 = SelectField('Player 3', choices=[])
+    player4 = SelectField('Player 4', choices=[])
+    player5 = SelectField('Player 5', choices=[])
 
-    player2 = StringField('RW',
-            validators = [
-                DataRequired(),
-                Length(min=4, max=100)
-            ]
-    )
-
-    player3 = StringField('ST',
-            validators = [
-                DataRequired(),
-                Length(min=4, max=100)
-            ]
-    )
-
-    player4 = StringField('RB',
-            validators = [
-                DataRequired(),
-                Length(min=4, max=100)
-            ]
-    )
-
-    player5 = StringField('LB',
-            validators = [
-                DataRequired(),
-                Length(min=4, max=100)
-            ]
-    )
 
     def validate_name(self, name):
         name = Userteams.query.filter_by(teamname=name.data).first()
@@ -57,50 +29,36 @@ class ChooseForm(FlaskForm):
     submit = SubmitField('Post team')
 
 class RegistrationForm(FlaskForm):
-    first_name = StringField('First Name',
+    name = StringField('Name',
             validators = [
                 DataRequired(),
-                Length(min=4, max=30)
+                Length(min=2, max=30)
             ]
     )
 
-    last_name = StringField('Last Name',
+    age = StringField('Age',
             validators = [
                 DataRequired(),
-                Length(min=4, max=30)
             ]
     )
-    email = StringField('Email',
-        validators = [
-            DataRequired(),
-            Email()
-        ]
-    )
-    password = PasswordField('Password',
-        validators = [
-            DataRequired(),
-        ]
-    )
-    confirm_password = PasswordField('Confirm Password',
-        validators = [
-            DataRequired(),
-            EqualTo('password')
-        ]
+    position = StringField('Position',
+            validators = [
+                DataRequired()
+            ]
     )
     submit = SubmitField('Sign Up')
 
-    def validate_email(self, email):
-        user = Users.query.filter_by(email=email.data).first()
+    def validate_name(self, email):
+        user = PLayers.query.filter_by(name=name.data).first()
 
         if user:
-            raise ValidationError('Email already in use')
+            raise ValidationError('Name already in database')
 
 
 class LoginForm(FlaskForm):
-	email = StringField('Email',
+	name = StringField('Name',
 		validators=[
 			DataRequired(),
-			Email()
 		])
 	password = PasswordField('Password',
 		validators=[
@@ -110,30 +68,26 @@ class LoginForm(FlaskForm):
     
 	submit = SubmitField('Login')
 
-class UpdateAccountForm(FlaskForm):
-    first_name = StringField('First Name',
+class UpdateTeamForm(FlaskForm):
+    name = StringField('Team Name/Week',
             validators = [
                 DataRequired(),
                 Length(min=4, max=30)
             ]
     )
+    player1 = SelectField('Player 1', choices=[])
+    player2 = SelectField('Player 2', choices=[])
+    player3 = SelectField('Player 3', choices=[])
+    player4 = SelectField('Player 4', choices=[])
+    player5 = SelectField('Player 5', choices=[])
 
-    last_name = StringField('Last Name',
-            validators = [
-                DataRequired(),
-                Length(min=4, max=30)
-            ]
-    )
-    email = StringField('Email',
-        validators = [
-            DataRequired(),
-            Email()
-        ]
-    )
-    submit = SubmitField('Update')
+    update = SubmitField('Update')
 
     def validate_email(self, email):
         if email.data != current_user.email:
             user = Users.query.filter_by(email=email.data).first()
             if user:
                 raise ValidationError('Email already in use')
+    
+    
+

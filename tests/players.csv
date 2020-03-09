@@ -1,0 +1,102 @@
+Club_id ,NAME,CLUB,LEAGUE,POSITION,RATING
+,Ruud Gullit,Chelsea,England Premier League,Attacker,93
+,George Best,Manchester United,England Premier League,Attacker,93
+,Thierry Henry,Arsenal,England Premier League,Attacker,93
+,Bobby Moore,West Ham ,England Premier League,Defender,92
+,Dennis Bergkamp,Arsenal,England Premier League,Attacker,92
+,Kevin De Bruyne,Manchester City,England Premier League,Midfielder  ,92
+,Ryan Giggs,Manchester United,England Premier League,Attacker,92
+,Kenny Dalglish,Liverpool ,England Premier League,Attacker,92
+,Ruud van Nistelrooy,Manchester United,England Premier League,Attacker,92
+,Gary Lineker,Tottenham Hotspur,England Premier League,Attacker,92
+,Laurent Blanc,Chelsea,England Premier League,Defender,91
+,Marcel Desailly,Chelsea,England Premier League,Defender,91
+,Patrick Vieira,Arsenal,England Premier League,Midfielder  ,91
+,Michael Ballack,Chelsea,England Premier League,Midfielder  ,91
+,Steven Gerrard,Liverpool ,England Premier League,Midfielder  ,91
+,Paul Scholes,Manchester United,England Premier League,Midfielder  ,91
+,Robert Pirès,Arsenal,England Premier League,Attacker,91
+,Andriy Shevchenko,Chelsea,England Premier League,Attacker,91
+,Didier Drogba,Chelsea,England Premier League,Attacker,91
+,Ian Rush,Liverpool ,England Premier League,Attacker,91
+,Michael Owen,Liverpool ,England Premier League,Attacker,91
+,Sergio Agüero,Manchester City,England Premier League,Attacker,91
+,Alan Shearer,Newcastle,England Premier League,Attacker,91
+,Harry Kane,Tottenham Hotspur,England Premier League,Attacker,91
+,Virgil van Dijk,Liverpool,England Premier League,Defender,90
+,Rio Ferdinand,Manchester United,England Premier League,Defender,90
+,Emmanuel Petit,Arsenal,England Premier League,Midfielder  ,90
+,Claude Makélélé,Chelsea,England Premier League,Midfielder  ,90
+,Michaël Essien,Chelsea,England Premier League,Midfielder  ,90
+,N'Golo Kanté,Chelsea,England Premier League,Midfielder  ,90
+,Gianfranco Zola,Chelsea,England Premier League,Attacker,90
+,Deco,Chelsea,England Premier League,Midfielder  ,90
+,Frank Lampard,Chelsea,England Premier League,Midfielder  ,90
+,Juan Sebastián Verón,Manchester United,England Premier League,Midfielder  ,90
+,Roy Keane,Manchester United,England Premier League,Midfielder  ,90
+,Marc Overmars,Arsenal,England Premier League,Attacker,90
+,Mohamed Salah,Liverpool,England Premier League,Attacker,90
+,Sol Campbell,Arsenal,England Premier League,Defender,89
+,Sadio Mané,Liverpool,England Premier League,Attacker,89
+,John Barnes,Liverpool ,England Premier League,Attacker,89
+,Ian Wright,Arsenal,England Premier League,Attacker,89
+,Pierre-Emerick Aubameyang,Arsenal,England Premier League,Attacker,89
+,David Silva,Manchester City,England Premier League,Midfielder  ,88
+,Christian Eriksen,Tottenham Hotspur,England Premier League,Midfielder  ,88
+,Roberto Firmino,Liverpool,England Premier League,Attacker,88
+,Heung Min Son,Tottenham Hotspur,England Premier League,Attacker,88
+,Paul Pogba,Manchester United,England Premier League,Midfielder  ,88
+,Raheem Sterling,Manchester City,England Premier League,Attacker,88
+,Mesut Özil,Arsenal,England Premier League,Midfielder  ,87
+,Juan Mata,Manchester United,England Premier League,Midfielder  ,87
+,Dele Alli,Tottenham Hotspur,England Premier League,Midfielder  ,87
+,Aymeric Laporte,Manchester City,England Premier League,Defender,87
+,Jan Vertonghen,Tottenham Hotspur,England Premier League,Defender,87
+,Toby Alderweireld,Tottenham Hotspur,England Premier League,Defender,87
+,Fernandinho,Manchester City,England Premier League,Midfielder  ,87
+,Bernardo Silva,Manchester City,England Premier League,Attacker,87
+,Fabinho,Liverpool,England Premier League,Midfielder  ,86
+,Georginio Wijnaldum,Liverpool,England Premier League,Midfielder  ,86
+,James Milner,Liverpool,England Premier League,Midfielder  ,86
+,İlkay Gündoğan,Manchester City,England Premier League,Midfielder  ,86
+,Andrew Robertson,Liverpool,England Premier League,Defender,86
+,Leroy Sané,Manchester City,England Premier League,Attacker,86
+,Kyle Walker,Manchester City,England Premier League,Defender,86
+,Riyad Mahrez,Manchester City,England Premier League,Attacker,86
+,Alexandre Lacazette,Arsenal,England Premier League,Attacker,86
+,Nicolás Otamendi,Manchester City,England Premier League,Defender,85
+,Jorginho,Chelsea,England Premier League,Midfielder  ,85
+,Rodri,Manchester City,England Premier League,Midfielder  ,85
+,Anthony Martial,Manchester United,England Premier League,Attacker,85
+,Trent Alexander-Arnold,Liverpool,England Premier League,Defender,85
+,Sokratis,Arsenal,England Premier League,Defender,84
+,Lucas Torreira,Arsenal,England Premier League,Midfielder  ,84
+,Marcos Alonso,Chelsea,England Premier League,Defender,84
+,Azpilicueta,Chelsea,England Premier League,Defender,84
+,João Cancelo,Manchester City,England Premier League,Defender,84
+,Willian,Chelsea,England Premier League,Attacker,84
+,Tammy Abraham,Chelsea,England Premier League,Attacker,84
+,Teemu Pukki,Norwich City,England Premier League,Attacker,84
+,David Luiz,Arsenal,England Premier League,Defender,83
+,Joe Gomez,Liverpool,England Premier League,Defender,83
+,John Stones,Manchester City,England Premier League,Defender,83
+,Davinson Sánchez,Tottenham Hotspur,England Premier League,Defender,83
+,Jordan Henderson,Liverpool,England Premier League,Midfielder  ,83
+,Lucas Moura,Tottenham Hotspur,England Premier League,Attacker,83
+,Giovani Lo Celso,Tottenham Hotspur,England Premier League,Midfielder  ,83
+,Nicolas Pépé,Arsenal,England Premier League,Attacker,83
+,Tahith Chong,Manchester United,England Premier League,Attacker,83
+,Marcus Rashford,Manchester United,England Premier League,Attacker,83
+,Jesse Lingard,Manchester United,England Premier League,Midfielder  ,82
+,Antonio Rüdiger,Chelsea,England Premier League,Defender,82
+,Joel Matip,Liverpool,England Premier League,Defender,82
+,Harry Maguire,Manchester United,England Premier League,Defender,82
+,Mateo Kovačić,Chelsea,England Premier League,Midfielder  ,82
+,Naby Keïta,Liverpool,England Premier League,Midfielder  ,82
+,Angeliño,Manchester City,England Premier League,Defender,82
+,Christian Pulisic,Chelsea,England Premier League,Attacker,82
+,Serge Aurier,Tottenham Hotspur,England Premier League,Defender,82
+,Pedro,Chelsea,England Premier League,Attacker,82
+,Xherdan Shaqiri,Liverpool,England Premier League,Attacker,82
+,Olivier Giroud,Chelsea,England Premier League,Attacker,82
+,Gabriel Jesus,Manchester City,England Premier League,Attacker,82
