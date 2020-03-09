@@ -48,8 +48,8 @@ class RegistrationForm(FlaskForm):
     )
     submit = SubmitField('Sign Up')
 
-    def validate_name(self, email):
-        user = PLayers.query.filter_by(name=name.data).first()
+    def validate_name(self, name):
+        user = Players.query.filter_by(name=name.data).first()
 
         if user:
             raise ValidationError('Name already in database')

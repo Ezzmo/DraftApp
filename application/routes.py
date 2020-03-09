@@ -83,13 +83,6 @@ def edit():
 		latest.player5 = form.player5.data
 		db.session.commit()
 		return redirect(url_for('edit'))
-#	elif request.method == 'GET':
-#		form.name.data=latest.name
-#		form.player1.data = latest.player1
-#		form.player2.data = latest.player2
-#		form.player3.data = latest.player3
-#		form.player4.data = latest.player4
-#		form.player5.data = latest.player5
 	return render_template('edit.html', title='Editor', form=form)
 
 @app.route('/register', methods=['GET', 'POST'])
