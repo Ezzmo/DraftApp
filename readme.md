@@ -34,7 +34,7 @@ A board editable only by an admin that displays draft lineup for a team. Intende
 
 
 ## Entity Relationship Diagram 
-![ERD]
+![ERD](https://github.com/Ezzmo/DraftApp/blob/master/ERD.png "ERD")
 
 
 
