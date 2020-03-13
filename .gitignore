@@ -2,3 +2,5 @@
 *.pyc
 /venv/
 /.pytest_cache/
+/application/__pychache__
+/tests/__pychache__

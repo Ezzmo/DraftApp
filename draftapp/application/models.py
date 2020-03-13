@@ -6,7 +6,6 @@ class Users(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(30), nullable=False)
     password = db.Column(db.String(250), nullable=False)
-    teams = db.relationship('Userteams', backref='User', lazy=True)
 
     def __repr__(self):
         return ''.join(['UserID: ', str(self.id), '\r\n',

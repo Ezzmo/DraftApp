@@ -1,7 +1,6 @@
 <html>
 	<body>
 	<div class=navbar>
-		{% if current_user.is_authenticated %}
 			<a href="{{ url_for('home') }}">Home</a>
 			<a href="{{ url_for('about') }}">About</a>
 			<a href="{{ url_for('make') }}">Maker</a>
@@ -9,12 +8,6 @@
 			<a href="{{ url_for('register') }}">Add players</a>
 			<a href="{{ url_for('board_delete') }}">Clear board</a>
 			<a href="{{ url_for('logout') }}">Logout</a>
-
-		{% else %}
-			<a href="{{ url_for('home') }}">Home</a>
-			<a href="{{ url_for('about') }}">About</a>
-			<a href="{{ url_for('login') }}">Admin login</a>
-		{% endif %}
 	</div>
 	{% block body_content %}{% endblock %}
 	</body>

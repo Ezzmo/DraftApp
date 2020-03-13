@@ -32,7 +32,6 @@ def login():
 	return render_template('login.html', title='Login', form=form)
 
 @app.route('/make', methods=['GET', 'POST'])
-@login_required
 def make():
 	form = ChooseForm()
 	form.player1.choices = [(player.name, player.name) for player in Players.query.all()]
@@ -59,13 +58,11 @@ def make():
 	return render_template('post.html', title='Post', form=form)
 
 @app.route('/logout')
-@login_required
 def logout():
 	logout_user()
 	return redirect(url_for('login'))
 
 @app.route('/edit', methods=['GET', 'POST'])
-@login_required
 def edit():
 	form = UpdateTeamForm()
 	form.player1.choices = [(player.name, player.name) for player in Players.query.all()]
@@ -86,7 +83,6 @@ def edit():
 	return render_template('edit.html', title='Editor', form=form)
 
 @app.route('/register', methods=['GET', 'POST'])
-@login_required
 def register():
 	form = RegistrationForm()
 	if form.validate_on_submit():

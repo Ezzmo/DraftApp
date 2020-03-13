@@ -1,0 +1,37 @@
+version: '3.7'
+services:
+  draftapp:
+    build: ./draftapp
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
+    environment:
+    - DATABASE_URI=mysql+pymysql://root:mypassword@draftdb/db
+    - SECRET_KEY=xd12370
+    networks:
+    - my-network
+    depends_on:
+    - db
+  db:
+    build: ./db
+    container_name: draftdb
+    environment:
+    - MYSQL_ROOT_PASSWORD=mypassword
+    - MYSQL_DATABASE=db
+    ports:
+    - target: 3306
+      published: 3306
+      protocol: tcp
+    volumes:
+    - type: volume
+      source: draftappdb
+      target: /var/lib/mysql
+    networks:
+    - my-network
+
+volumes:
+  draftappdb:
+
+networks:
+  my-network:
